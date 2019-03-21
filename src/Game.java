@@ -1,4 +1,8 @@
-public class Game {
+import java.util.concurrent.Executor;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
+
+public class Game extends Thread{
 
     public static void main(String[] args) {
         System.out.println("Hello Orc & Hobbit World!");
@@ -23,6 +27,14 @@ public class Game {
 
         Hobbit gollum = new Hobbit("Smeagol");
         w.addObserver(gollum);
+
+
+        ExecutorService exec = Executors.newFixedThreadPool(30);
+
+        for (int i = 0; i < 300; i++) {
+            Hobbit h = new Hobbit("Anon");
+            exec.execute(h);
+        }
 
 
         System.out.println("Vejret ændrer sig");

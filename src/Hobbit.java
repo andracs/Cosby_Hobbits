@@ -6,9 +6,11 @@
  *
  */
 
-public class Hobbit implements WeatherObserver{
+public class Hobbit implements WeatherObserver, Runnable{
 
     private String name;
+    private boolean hartojpaa = true;
+    private WeatherType hobbittensOpfattelseAfVejret;
 
     public Hobbit(String name) {
         this.name = name;
@@ -19,5 +21,18 @@ public class Hobbit implements WeatherObserver{
     @Override
     public void update(WeatherType w) {
         System.out.println("Mmmm... " + name + " nyder varmen.");
+        hobbittensOpfattelseAfVejret = w;
+    }
+
+    @Override
+    public void run() {
+
+
+            if (hartojpaa && hobbittensOpfattelseAfVejret == WeatherType.SUNNY){
+                System.out.println(name + " Smider tøjet");
+                hartojpaa = false;
+            }
+
+
     }
 }
