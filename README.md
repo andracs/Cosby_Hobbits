@@ -6,6 +6,6 @@ Eksempel baseret på https://java-design-patterns.com/patterns/observer/
 1. Er denne implementation thread safe?
 2. Hvis ikke den er thread safe, hvordan kunne du gøre det thread-safe?
 
-# Klasseidagram
+# Klassediagram
 
 ![Image](https://java-design-patterns.com/patterns/observer/etc/observer_1.png)
