@@ -1,4 +1,4 @@
-# Cosby Hobbits 
+# Cosby Hobbits - et eksempel på Observer pattern
 Eksempel baseret på https://java-design-patterns.com/patterns/observer/ 
 
 # Opgave
