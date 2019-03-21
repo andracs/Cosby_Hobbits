@@ -8,4 +8,4 @@ Eksempel baseret på https://java-design-patterns.com/patterns/observer/
 
 # Klasseidagram
 
-!(Image)[https://java-design-patterns.com/patterns/observer/etc/observer_1.png]
+![Image](https://java-design-patterns.com/patterns/observer/etc/observer_1.png)
