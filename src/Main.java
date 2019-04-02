@@ -25,6 +25,7 @@ public class Main {
         w.addObserver(gollum);
 
 
+
         System.out.println("Vejret ændrer sig");
         System.out.println("Hobitterne kan mærke varmen på deres små kroppe");
         w.timePasses();
