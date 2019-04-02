@@ -1,3 +1,6 @@
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
+
 public class Testing {
 
     public static void main(String[] args) {
@@ -18,8 +21,9 @@ public class Testing {
             }
         };
         //Creates 100 threads which creates 10 hobbits each for a total of 1000
+        ExecutorService threadPool = Executors.newCachedThreadPool();
         for (int i = 0; i < 100; i++) {
-            new Thread( runnable ).start();
+            threadPool.execute( runnable );
         }
 
     }
