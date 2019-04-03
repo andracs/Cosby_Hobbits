@@ -7,6 +7,8 @@
  */
 
 import java.util.ArrayList;
+import java.util.concurrent.locks.Lock;
+import java.util.concurrent.locks.ReentrantLock;
 
 public class Weather {
 
@@ -17,9 +19,10 @@ public class Weather {
         // Lucas siger, at spillet starter i regnvejr altid
         this.setWeatherNow(WeatherType.RAINY);
         observers = new ArrayList<WeatherObserver>();
+        Lock lock = new ReentrantLock();
     }
 
-    public void addObserver(WeatherObserver w) {
+    public synchronized void addObserver(WeatherObserver w) {
         observers.add(w);
     }
 
@@ -40,6 +43,8 @@ public class Weather {
             }
         }
     }
+
+    public int numberOfOvservers(){return observers.size();}
 
     public WeatherType getWeatherNow() {
         return weatherNow;
